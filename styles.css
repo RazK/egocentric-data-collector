@@ -1,0 +1,258 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --surface-strong: #f0f3f7;
+  --text: #142033;
+  --muted: #546173;
+  --border: #d8e0e8;
+  --accent: #315f8f;
+  --accent-soft: #e8f0f9;
+  --shadow: 0 16px 40px rgba(20, 32, 51, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.65;
+  color: var(--text);
+  background: linear-gradient(180deg, #fcfcfd 0%, var(--bg) 100%);
+}
+
+img {
+  max-width: 100%;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 10;
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+}
+
+.hero {
+  padding: 5rem 1.5rem 3rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.eyebrow,
+.section-label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.15;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 0.75rem;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  max-width: 42rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+main {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1.2rem;
+  padding: 2rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+.section-heading h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0;
+}
+
+.section p,
+.section li,
+.note {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.roadmap-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.phase-card {
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface-strong);
+  overflow: hidden;
+}
+
+.phase-card-production {
+  background: linear-gradient(135deg, var(--accent-soft) 0%, #f7fafc 100%);
+}
+
+.phase-header {
+  padding: 1.1rem 1.15rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.phase-header h3 {
+  font-size: 1.08rem;
+  margin-bottom: 0.25rem;
+}
+
+.phase-duration {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.phase-body {
+  padding: 1.05rem 1.15rem 1.15rem;
+}
+
+.phase-body h4 {
+  font-size: 0.95rem;
+  margin: 0.85rem 0 0.35rem;
+  color: var(--text);
+}
+
+.phase-body ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.phase-body li + li {
+  margin-top: 0.25rem;
+}
+
+.note {
+  margin-top: 1rem;
+  padding: 1rem 1.15rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0.5rem;
+}
+
+.principles-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.principle-card {
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  padding: 1.1rem 1.1rem 1rem;
+  background: var(--surface);
+}
+
+.principle-card h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.footer {
+  max-width: 72rem;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem 2rem;
+  color: var(--muted);
+}
+
+.footer p {
+  margin: 0.15rem 0;
+}
+
+@media (max-width: 900px) {
+  .roadmap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 3.5rem;
+  }
+
+  .section {
+    padding: 1.25rem;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  .hero {
+    padding: 1rem 0 0.75rem;
+  }
+
+  .section,
+  .phase-card,
+  .principle-card,
+  .note {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  .section {
+    border: 1px solid #ccc;
+    padding: 0.9rem;
+  }
+
+  .footer {
+    margin-bottom: 0;
+  }
+}
