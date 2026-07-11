@@ -26,9 +26,9 @@
           <h2 id="background-title">Background</h2>
         </div>
         <p>
-          Prepared for Fiverr, the client commissioning this initiative. Drawing on my experience founding and scaling a funded wearable hardware company end-to-end
-          (<a href="#author-bio">bio below</a>), this proposal applies that same ownership model here, scoped against Fiverr's
-          <a href="docs/references/CamSpecification_v1.2.pdf">Head Band Camera Technical Specification (v1.2)</a>, and phases delivery rather than building the full production system from day one.
+          Prepared for discussion with Fiverr Physical AI. This proposal recommends a phased execution strategy based on my experience leading the development of a wearable smart-glasses platform spanning hardware, embedded systems, AI and software
+          (<a href="#author-bio">bio below</a>), scoped against the provided
+          <a href="docs/references/CamSpecification_v1.2.pdf">Head Band Camera Technical Specification (v1.2)</a>.
         </p>
       </section>
 
@@ -39,6 +39,9 @@
         </div>
         <p>
           Build a lightweight, head-worn platform that captures synchronized first-person video and IMU data for training robots on real-world household tasks.
+        </p>
+        <p>
+          My role is to lead the technical execution of the project, making the key architectural decisions, identifying opportunities to accelerate development through existing technologies, and building the components that create unique value.
         </p>
       </section>
 
@@ -61,14 +64,14 @@
 
               <h4>Scope</h4>
               <ul>
-                <li>Camera + IMU selection; buy-vs-build call</li>
+                <li>Camera + IMU selection; Buy vs. Build evaluation</li>
                 <li>Wearable mechanical prototype</li>
                 <li>Android app: record, store, upload</li>
                 <li>End-to-end data collection pipeline</li>
               </ul>
 
               <h4>Target spec</h4>
-              <p class="spec-strip">1080p30 · H.264 · ~150° FOV · IMU ≥250 Hz · head-mounted · ready for extended field testing</p>
+              <p class="spec-strip">1080p30 · H.264 · ~150° FOV · IMU ≥250 Hz · head-mounted · suitable for extended real-world data collection</p>
             </div>
           </article>
 
@@ -83,7 +86,7 @@
               <p>Validate the complete solution with a small group of internal users.</p>
 
               <h4>Scope</h4>
-              <p>Build 5 devices, deploy internally at Fiverr's Israel offices, and iterate on reliability, data quality, and architecture from user feedback. I visit on-site periodically throughout for hands-on support.</p>
+              <p>Build 4–8 Alpha devices, deploy internally at Fiverr's Israel offices, and iterate on reliability, data quality, and architecture from user feedback. I visit on-site periodically throughout for hands-on support.</p>
 
               <h4>Outcome</h4>
               <p>A validated wearable platform and a prioritized roadmap toward production.</p>
@@ -97,7 +100,14 @@
             </div>
 
             <div class="phase-body">
-              <p>Prepare for an initial production run of ~1,000 units: production hardware architecture, custom electronics if required, iOS support, hardware-level camera/IMU sync, factory calibration, mechanical optimization, manufacturing, and fleet management.</p>
+              <ul>
+                <li>Production hardware</li>
+                <li>Manufacturing</li>
+                <li>iOS support</li>
+                <li>Calibration</li>
+                <li>Hardware synchronization</li>
+                <li>Fleet management</li>
+              </ul>
             </div>
           </article>
         </div>
@@ -132,7 +142,7 @@
 
     <footer class="footer" id="author-bio">
       <p><strong>Prepared by Raz Karl</strong></p>
-      <p>Co-Founder &amp; CTO, BlinkAid — raised $1.2M+ and led a wearable medical device from research to a funded, patented product (US20240100335A1) across hardware, firmware, ML, and mechanical design. Former Senior Android Engineer, Lightricks; sole software engineer behind a cybersecurity platform at JSOF.</p>
+      <p>Led the development of BlinkAid, a funded wearable medical device startup, from concept to working product across hardware, firmware, AI and software. Former Senior Android Engineer, Lightricks; sole software engineer behind a cybersecurity platform at JSOF.</p>
     </footer>
   </body>
 </html>
