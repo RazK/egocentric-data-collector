@@ -57,12 +57,12 @@ img {
 }
 
 .hero {
-  background: linear-gradient(180deg, var(--ice) 0%, var(--ice-deep) 60%, var(--paper) 100%);
+  background: var(--ice);
   border-bottom: 1px solid var(--border);
 }
 
 .hero-content {
-  padding: 4.5rem 1.5rem 3rem;
+  padding: 3rem 1.5rem 2.25rem;
   max-width: 72rem;
   margin: 0 auto;
 }
@@ -88,10 +88,10 @@ h4 {
 }
 
 h1 {
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-size: clamp(2.1rem, 4.5vw, 3.4rem);
   font-weight: 800;
   color: var(--ink);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
   text-wrap: balance;
 }
 
@@ -103,18 +103,20 @@ h1 {
 }
 
 .hero-media {
-  margin-top: 2.5rem;
+  margin-top: 1.75rem;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 1.1rem;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 1rem;
   align-items: stretch;
 }
 
 .hero-photo {
   position: relative;
   margin: 0;
-  min-height: 16rem;
-  border-radius: 0.9rem;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1024 / 559;
+  border-radius: 0.75rem;
   overflow: hidden;
   border: 1px solid rgba(16, 19, 26, 0.1);
   background: var(--ink);
@@ -132,52 +134,54 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 0.7rem 1rem;
+  padding: 0.6rem 0.85rem;
   background: linear-gradient(0deg, rgba(16, 19, 26, 0.82), transparent);
   color: #fff;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 600;
 }
 
+/* Compact linked reference card (not a video embed): the source
+   clip is a third-party hotlink whose autoplay/aspect behavior we
+   can't guarantee on mobile, so it's presented as a small static
+   thumbnail + caption that links out instead of an embedded player. */
 .hero-reference {
   display: flex;
   flex-direction: column;
-  border-radius: 0.9rem;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0.75rem;
   overflow: hidden;
-  border: 1px solid rgba(16, 19, 26, 0.1);
-  background: var(--ink);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: inherit;
+  text-decoration: none;
 }
 
-.hero-reference video {
-  display: block;
+.hero-reference-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  flex: 1 1 auto;
-  min-height: 9rem;
-  object-fit: cover;
+  aspect-ratio: 4 / 3;
   background: var(--ink);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .hero-reference-caption {
   margin: 0;
-  padding: 0.6rem 0.85rem;
-  background: var(--surface);
+  padding: 0.55rem 0.75rem;
   color: var(--muted);
   font-size: 0.76rem;
   display: flex;
   align-items: center;
-  gap: 0.45rem;
-}
-
-.hero-reference-caption a {
-  color: var(--accent-ink);
-  font-weight: 600;
-  text-decoration: underline;
+  gap: 0.4rem;
 }
 
 .ref-dot {
   flex: none;
-  width: 0.45rem;
-  height: 0.45rem;
+  width: 0.4rem;
+  height: 0.4rem;
   border-radius: 50%;
   background: var(--accent);
 }
@@ -231,7 +235,7 @@ main {
 }
 
 .phase-card-production {
-  background: linear-gradient(135deg, var(--accent-soft) 0%, #fbf8f2 100%);
+  background: var(--accent-soft);
 }
 
 .phase-header {
@@ -333,14 +337,19 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .hero-photo {
-    min-height: 13rem;
+  .hero-reference-thumb {
+    aspect-ratio: 21 / 9;
   }
 }
 
 @media (max-width: 640px) {
   .hero-content {
-    padding-top: 3.5rem;
+    padding: 2.25rem 1.25rem 1.75rem;
+  }
+
+  .hero-media {
+    margin-top: 1.25rem;
+    gap: 0.75rem;
   }
 
   .section {
@@ -348,13 +357,9 @@ main {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .hero-reference video {
-    display: none;
-  }
-
-  .hero-reference::after {
-    content: "";
+@media (max-width: 400px) {
+  .spec-strip {
+    font-size: 0.78rem;
   }
 }
 
