@@ -26,11 +26,8 @@
           <h2 id="background-title">Background</h2>
         </div>
         <p>
-          Prepared for Fiverr as the client commissioning this initiative. As Co-Founder &amp; CTO of BlinkAid, I took a wearable medical device from university research to a funded, patented product — raising $1.2M+ and personally directing the hardware, embedded firmware, signal processing, machine learning, mechanical design, and clinical validation behind it. That is the same end-to-end ownership this project needs, and I recommend approaching it through phased validation rather than attempting to build the complete production system from day one.
-        </p>
-        <p>
-          This proposal is scoped against Fiverr's own hardware requirements, detailed in the
-          <a href="docs/references/CamSpecification_v1.2.pdf">Head Band Camera Technical Specification (v1.2)</a>.
+          Prepared for Fiverr, the client commissioning this initiative. As Co-Founder &amp; CTO of BlinkAid, I took a wearable medical device from research to a funded, patented product — raising $1.2M+ while directing its hardware, firmware, signal processing, ML, and mechanical design end-to-end. This proposal applies that same ownership model here, scoped against Fiverr's
+          <a href="docs/references/CamSpecification_v1.2.pdf">Head Band Camera Technical Specification (v1.2)</a>, and phases delivery rather than building the full production system from day one.
         </p>
       </section>
 
@@ -40,7 +37,7 @@
           <h2 id="objective-title">Project Objective</h2>
         </div>
         <p>
-          Develop a lightweight wearable platform for collecting high-quality first-person video and IMU data for training robots on real-world household tasks.
+          Build a lightweight, head-worn platform that captures synchronized first-person video and IMU data for training robots on real-world household tasks.
         </p>
       </section>
 
@@ -59,30 +56,18 @@
 
             <div class="phase-body">
               <h4>Objective</h4>
-              <p>Develop the first functional wearable data collection device using commercially available hardware wherever practical.</p>
+              <p>First functional wearable data-collection device, using commercially available hardware wherever practical.</p>
 
               <h4>Scope</h4>
               <ul>
-                <li>Camera and IMU selection</li>
-                <li>Buy vs. Build evaluation</li>
+                <li>Camera + IMU selection; buy-vs-build call</li>
                 <li>Wearable mechanical prototype</li>
-                <li>Android application</li>
-                <li>Video and IMU recording</li>
-                <li>Local storage</li>
-                <li>End-of-session upload</li>
+                <li>Android app: record, store, upload</li>
                 <li>End-to-end data collection pipeline</li>
               </ul>
 
-              <h4>Target</h4>
-              <ul>
-                <li>One functional Alpha device</li>
-                <li>1080p at 30 FPS</li>
-                <li>H.264 video</li>
-                <li>Approximately 150-degree field of view</li>
-                <li>IMU sampling at 250 Hz or higher</li>
-                <li>Head-mounted form factor</li>
-                <li>Suitable for extended real-world testing</li>
-              </ul>
+              <h4>Target spec</h4>
+              <p class="spec-strip">1080p30 · H.264 · ~150° FOV · IMU ≥250 Hz · head-mounted · ready for extended field testing</p>
             </div>
           </article>
 
@@ -97,15 +82,7 @@
               <p>Validate the complete solution with a small group of internal users.</p>
 
               <h4>Scope</h4>
-              <ul>
-                <li>Build 5 devices</li>
-                <li>Internal deployment</li>
-                <li>Technical support</li>
-                <li>Reliability improvements</li>
-                <li>User feedback</li>
-                <li>Data-quality evaluation</li>
-                <li>Architecture refinements</li>
-              </ul>
+              <p>Build 5 devices, deploy internally with technical support, and iterate on reliability, data quality, and architecture from user feedback.</p>
 
               <h4>Outcome</h4>
               <p>A validated wearable platform and a prioritized roadmap toward production.</p>
@@ -119,14 +96,13 @@
             </div>
 
             <div class="phase-body">
-              <p>Prepare the system for an initial production run of approximately 1,000 units.</p>
-              <p>Expected topics include production hardware architecture, custom electronics if required, iOS support, hardware-level camera and IMU synchronization, factory calibration, mechanical optimization, manufacturing and supplier coordination, production testing, fleet management and large-scale deployment.</p>
+              <p>Prepare for an initial production run of ~1,000 units: production hardware architecture, custom electronics if required, iOS support, hardware-level camera/IMU sync, factory calibration, mechanical optimization, manufacturing, and fleet management.</p>
             </div>
           </article>
         </div>
 
         <aside class="note" aria-label="Phase 3 note">
-          The detailed scope, timeline, team structure and commercial terms for this phase will be defined based on the findings from the Alpha and internal pilot phases.
+          Scope, timeline, team, and commercial terms for this phase follow from Alpha and Pilot findings.
         </aside>
       </section>
 
@@ -150,16 +126,6 @@
             <h3>Keep the 1,000-unit production target in view</h3>
           </article>
         </div>
-      </section>
-
-      <section class="section" aria-labelledby="next-step-title">
-        <div class="section-heading">
-          <p class="section-label">5</p>
-          <h2 id="next-step-title">Next Step</h2>
-        </div>
-        <p>
-          The immediate next step is a technical alignment call to confirm priorities, success criteria, team structure and the expected level of ownership.
-        </p>
       </section>
     </main>
 
